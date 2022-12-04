@@ -30,9 +30,6 @@ class Home (Tk):
         lbl4.place(x=1240, y=20)
         lbl4.bind("<Button-1>", self.open_signup)
 
-        # lbl4 = Button(self, text="Booking", bg="white", font=("", 15, "bold"), fg="Black")
-        # lbl4.place(x=1250, y=20)
-
 
         self.mainloop()
     def open_signup(self, e):

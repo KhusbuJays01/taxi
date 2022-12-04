@@ -24,7 +24,7 @@ class Register(Tk):
         self.reg_User_Type = StringVar()
         self.reg_Name = StringVar()
         self.reg_Address = StringVar()
-        self.reg_Licesnse = StringVar()
+        # self.reg_Licesnse = StringVar()
         self.reg_Email = StringVar()
         self.reg_Telephone_No = StringVar()
         self.reg_Gender = StringVar()
@@ -84,11 +84,11 @@ class Register(Tk):
         self.ent7 = Entry(label_Resister, textvariable=self.reg_Password, width=50)
         self.ent7.place(x=350, y=400)
 
-        lbl11 = Label(label_Resister, text="license:", bg="#2A556C", font=("", 15, "bold"), fg="Black")
-        lbl11.place(x=200, y=450)
-
-        self.ent11 = Entry(label_Resister, textvariable=self.reg_Licesnse, width=50)
-        self.ent11.place(x=350, y=450)
+        # lbl11 = Label(label_Resister, text="license:", bg="#2A556C", font=("", 15, "bold"), fg="Black")
+        # lbl11.place(x=200, y=450)
+        #
+        # self.ent11 = Entry(label_Resister, textvariable=self.reg_Licesnse, width=50)
+        # self.ent11.place(x=350, y=450)
 
         lbl8 = Button(label_Resister, text="Create", bg="#ED5843", font=("", 15, "bold"), fg="Black",
                       command=self.reg_db)
@@ -133,7 +133,7 @@ class Register(Tk):
 
 
 
-    # Database connection
+    #------------------------------------------ Database connection
 
     def reg_db(self):
       # if self.reg_Name.get() == '':
@@ -157,44 +157,12 @@ class Register(Tk):
         elif self.reg_Password.get() == '':
             messagebox.showerror("Error","Enter your Password")
 
-        elif self.reg_Licesnse.get() == '':
-            messagebox.showerror("Error","Enter your License")
+        # elif self.reg_Licesnse.get() == '':
+        #     messagebox.showerror("Error","Enter your License")
 
         elif self.reg_Email.get() != None or self.reg_Telephone_No != None:
             self.em = self.email(self.reg_Email.get())
             self.em1 = self.number(self.reg_Telephone_No.get())
-
-
-        # if (self.em==True and self.em1==True):
-        #     try:
-        #
-        #         con = mysql.connector.connect(host='localhost', user='root', password='', database='khusbu')
-        #         cur = con.cursor()
-        #         query = ('Select * from Registration where email = %s')
-        #         values = (self.reg_Email.get(),)
-        #         cur.execute(query, values)
-        #         row = cur.fetchone()
-        #         if row != None:
-        #             messagebox.showerror("Error", "no user found")
-        #         else:
-        #             cur.execute('insert into Registration values(%s,%s,%s,%s,%s,%s,%s,%s,%s)', (
-        #                 self.reg_id.get(),
-        #                 self.reg_User_Type.get(),
-        #                 self.reg_Name.get(),
-        #                 self.reg_Address.get(),
-        #                 self.reg_Licesnse.get(),
-        #                 self.reg_Email.get(),
-        #                 self.reg_Telephone_No.get(),
-        #                 self.reg_Gender.get(),
-        #                 self.reg_Password.get(),
-        #             ))
-        #             con.commit()
-        #             con.close()
-        #             messagebox.showinfo("Ok", "Saved")
-        #     except Exception as ex:
-        #         print(ex)
-        #         messagebox.showerror("Error", "Error")
-
 
 
 if __name__ == '__main__':

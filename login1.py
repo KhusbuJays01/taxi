@@ -1,7 +1,6 @@
 from tkinter import *
 from tkinter import ttk
 from PIL import ImageTk,Image
-
 from Forgot import Forgot
 
 
@@ -84,6 +83,8 @@ class Login1(Tk):
 
         lbl9 = Button(self.label_win, border=0, text="Sign Up", bg="white", font=("", 10), fg="red")
         lbl9.place(x=200, y=500)
+
+
         # end nex window
 
 
@@ -92,6 +93,7 @@ class Login1(Tk):
     def open_Forget(self, e):
         self.label_win.destroy()
         Forgot()
+
 
 if __name__ == '__main__':
     login = Login1()
