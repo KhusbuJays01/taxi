@@ -16,7 +16,7 @@ class Home (Tk):
         self.frame.pack()
 
 
-        image = Image.open("image/khusbujais.png").resize((1360, 700))
+        image = Image.open("../image/khusbujais.png").resize((1360, 700))
         bgImage = ImageTk.PhotoImage(image)
         bgLabel = Label(self.frame, image=bgImage, width=1360, height=700, bg='black')
         bgLabel.pack()

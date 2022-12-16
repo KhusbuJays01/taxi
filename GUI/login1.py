@@ -25,7 +25,7 @@ class Login1(Tk):
         # self.log.Password.StringVar()
 
         # --------------------------image size-------------------------------
-        self.image = Image.open('image/car.jpg').resize((1500, 800))
+        self.image = Image.open('../image/car.jpg').resize((1500, 800))
         self.bgImage=ImageTk.PhotoImage(self.image)
 
         bgLabel=Label(self.frame, image=self.bgImage)

@@ -11,7 +11,7 @@ class Booking (Tk):
         self.frame.pack()
 
 # # image size
-        image = Image.open('pro.png').resize((1360,700), Image.ANTIALIAS)
+        image = Image.open('image/pro.png').resize((1360, 700), Image.ANTIALIAS)
 
         bgImage=ImageTk.PhotoImage(image)
 #

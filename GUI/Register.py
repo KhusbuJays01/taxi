@@ -34,8 +34,8 @@ class Register(Tk):
         self.geometry('990x660+50+50')
 
         # ----------------------------next  window------------------------
-        label_Resister = Label(bg="#2A556C", width=123, height=40)
-        label_Resister.place(x=50, y=25)
+        Frame_Register = Frame(bg="#2A556C", width=900, height=550)
+        Frame_Register.place(x=50, y=40)
 
         # ------------------------------Title----------------------
         head = Label(text="Registration System", bg="#2A556C", font=("", 25, "bold"), fg="#FFFAFA")
@@ -43,61 +43,61 @@ class Register(Tk):
 
 
         # -----------------set label--------------------------------------
-        lbl1 = Label(label_Resister, text="User_Type:", bg="#2A556C", font=("", 15, "bold"), fg="Black")
+        lbl1 = Label(Frame_Register, text="User_Type:", bg="#2A556C", font=("", 15, "bold"), fg="Black")
         lbl1.place(x=200, y=100)
 
 
-        lbl2 = Label(label_Resister, text="Full_Name:", bg="#2A556C", font=("", 15, "bold"), fg="Black")
+        lbl2 = Label(Frame_Register, text="Full_Name:", bg="#2A556C", font=("", 15, "bold"), fg="Black")
         lbl2.place(x=200, y=150)
 
-        lbl3 = Label(label_Resister, text="Email:", bg="#2A556C", font=("", 15, "bold"), fg="Black")
+        lbl3 = Label(Frame_Register, text="Email:", bg="#2A556C", font=("", 15, "bold"), fg="Black")
         lbl3.place(x=200, y=200)
 
-        lbl4 = Label(label_Resister, text="Address:", bg="#2A556C", font=("", 15, "bold"), fg="Black")
+        lbl4 = Label(Frame_Register, text="Address:", bg="#2A556C", font=("", 15, "bold"), fg="Black")
         lbl4.place(x=200, y=250)
 
-        lbl5 = Label(label_Resister, text="Phone_No.:", bg="#2A556C", font=("", 15, "bold"), fg="Black")
+        lbl5 = Label(Frame_Register, text="Phone_No.:", bg="#2A556C", font=("", 15, "bold"), fg="Black")
         lbl5.place(x=200, y=300)
 
-        lbl6 = Label(label_Resister, text="Gender:", bg="#2A556C", font=("", 15, "bold"), fg="Black")
+        lbl6 = Label(Frame_Register, text="Gender:", bg="#2A556C", font=("", 15, "bold"), fg="Black")
         lbl6.place(x=200, y=350)
 
-        lbl7 = Label(label_Resister, text="Password:", bg="#2A556C", font=("", 15, "bold"), fg="Black")
+        lbl7 = Label(Frame_Register, text="Password:", bg="#2A556C", font=("", 15, "bold"), fg="Black")
         lbl7.place(x=200, y=400)
 
 
         # ---------------combo box------------------------------
-        self.combo = ttk.Combobox(label_Resister, textvariable=self.reg_User_Type, values=["Admin", "Customer", "Driver"])
+        self.combo = ttk.Combobox(Frame_Register, textvariable=self.reg_User_Type, values=["Admin", "Customer", "Driver"])
         self.combo.place(width=300, x=350, y=110)
         self. combo.bind("<<ComboboxSelected>>", self.open_Driver)
 
 
         # -----------------------entry set-------------------------------
 
-        self.ent2 = Entry(label_Resister, textvariable=self.reg_Name, width=50)
+        self.ent2 = Entry(Frame_Register, textvariable=self.reg_Name, width=50)
         self.ent2.place(x=350, y=150)
 
 
-        self.ent3 = Entry(label_Resister, textvariable=self.reg_Email, width=50)
+        self.ent3 = Entry(Frame_Register, textvariable=self.reg_Email, width=50)
         self.ent3.place(x=350, y=200)
 
 
-        self.ent4 = Entry(label_Resister, textvariable=self.reg_Address, width=50)
+        self.ent4 = Entry(Frame_Register, textvariable=self.reg_Address, width=50)
         self.ent4.place(x=350, y=250)
 
 
 
-        self.ent5 = Entry(label_Resister, textvariable=self.reg_Telephone_No, width=50)
+        self.ent5 = Entry(Frame_Register, textvariable=self.reg_Telephone_No, width=50)
         self.ent5.place(x=350, y=300)
 
 
 
-        combo = ttk.Combobox(label_Resister, textvariable=self.reg_Gender, values=["Male", "Female", "Other"])
+        combo = ttk.Combobox(Frame_Register, textvariable=self.reg_Gender, values=["Male", "Female", "Other"])
         combo.place(width=300, x=350, y=350)
 
 
 
-        self.ent7 = Entry(label_Resister, textvariable=self.reg_Password, width=50)
+        self.ent7 = Entry(Frame_Register, textvariable=self.reg_Password, width=50)
         self.ent7.place(x=350, y=400)
 
         # lbl11 = Label(label_Resister, text="license:", bg="#2A556C", font=("", 15, "bold"), fg="Black")
@@ -112,19 +112,19 @@ class Register(Tk):
         # lbl11.place(width=200, height=30, x=500, y=500)
 
         # ---------------------set text------------------------------
-        lbl9 = Label(label_Resister, text="Already have an account!!", bg="#2A556C", font=("", 10, "bold"),
+        lbl9 = Label(Frame_Register,text="Already have an account!!", bg="#2A556C", font=("", 10, "bold"),
                      fg="#A90000")
-        lbl9.place(x=250, y=550)
+        lbl9.place(x=150, y=500)
 
 # ---------------------------------------------set sign in button-------------------------
-        lbl8 = Button(label_Resister, text="Create", bg="#ED5843", font=("", 15, "bold"), fg="Black",
+        lbl8 = Button(Frame_Register, text="Create", bg="#ED5843", font=("", 15, "bold"), fg="Black",
                       command=self.reg_db)
         lbl8.place(width=200, height=30, x=350, y=500)
 
-        lbl10 = Button(label_Resister, border=0, text="Sign_in", bg="#2A556C", font=("", 10, "bold"), fg="#72E73C",
+        lbl10 = Button(Frame_Register,border=0, text="Sign_in", bg="#2A556C", font=("", 10, "bold"), fg="#72E73C",
                        command= lambda *a: self.open_login1())
 
-        lbl10.place(x=500, y=560)
+        lbl10.place(x=600, y=500)
         self.mainloop()
 
     # -----------------------------validation-----------------------------
