@@ -27,20 +27,20 @@ class makebooking(Tk):
         head = Label(text="Pick Up--------------------------", bg="#2A556C", font=("", 20, "bold"), fg="#FFFAFA")
         head.place(x=100, y=150)
 
-        lbl1 = Label(Frame_makebooking, text="Address :", bg="#2A556C", font=("", 15, "bold"), fg="#FFFAFA")
-        lbl1.place(x=50, y=170)
+        picAddress = Label(Frame_makebooking, text="Address :", bg="#2A556C", font=("", 15, "bold"), fg="#FFFAFA")
+        picAddress.place(x=50, y=170)
 
         ent2 = Entry(Frame_makebooking, width=35)
         ent2.place(x=153, y=175)
 
-        lbl3 = Label(Frame_makebooking, text="Time :", bg="#2A556C", font=("", 15, "bold"), fg="#FFFAFA")
-        lbl3.place(x=50, y=220)
+        picTime = Label(Frame_makebooking, text="Time :", bg="#2A556C", font=("", 15, "bold"), fg="#FFFAFA")
+        picTime.place(x=50, y=220)
 
         ent3 = Entry(Frame_makebooking, width=35)
         ent3.place(x=153, y=225)
 
-        lbl4 = Label(Frame_makebooking, text="Date :", bg="#2A556C", font=("", 15, "bold"), fg="#FFFAFA")
-        lbl4.place(x=50, y=255)
+        picDate = Label(Frame_makebooking, text="Date :", bg="#2A556C", font=("", 15, "bold"), fg="#FFFAFA")
+        picDate.place(x=50, y=255)
 
         ent4 = Entry(Frame_makebooking, width=35)
         ent4.place(x=153, y=265)
@@ -48,38 +48,38 @@ class makebooking(Tk):
         head = Label(text="Drop-------------------------------", bg="#2A556C", font=("", 20, "bold"), fg="#FFFAFA")
         head.place(x=540, y=150)
 
-        lbl5 = Label(Frame_makebooking, text="Address :", bg="#2A556C", font=("", 15, "bold"), fg="#FFFAFA")
-        lbl5.place(x=490, y=170)
+        dropAddress = Label(Frame_makebooking, text="Address :", bg="#2A556C", font=("", 15, "bold"), fg="#FFFAFA")
+        dropAddress.place(x=490, y=170)
 
         ent5 = Entry(Frame_makebooking, width=35)
         ent5.place(x=600, y=175)
 
-        lbl6 = Label(Frame_makebooking, text="Time :", bg="#2A556C", font=("", 15, "bold"), fg="#FFFAFA")
-        lbl6.place(x=490, y=220)
+        dropTime = Label(Frame_makebooking, text="Time :", bg="#2A556C", font=("", 15, "bold"), fg="#FFFAFA")
+        dropTime.place(x=490, y=220)
 
         ent6 = Entry(Frame_makebooking, width=35)
         ent6.place(x=600, y=225)
 
-        lbl7 = Label(Frame_makebooking, text="Date :", bg="#2A556C", font=("", 15, "bold"), fg="#FFFAFA")
-        lbl7.place(x=490, y=255)
+        dropDate = Label(Frame_makebooking, text="Date :", bg="#2A556C", font=("", 15, "bold"), fg="#FFFAFA")
+        dropDate.place(x=490, y=255)
 
         ent7 = Entry(Frame_makebooking, width=35)
         ent7.place(x=600, y=265)
 
-        lbl4 = Button(Frame_makebooking, text="Confirm", bg="Green", font=("", 15, "bold"), fg="Black")
-        lbl4.place(x=90, y=300, width=90)
+        btnConfirm = Button(Frame_makebooking, text="Confirm", bg="Green", font=("", 15, "bold"), fg="Black")
+        btnConfirm.place(x=90, y=300, width=90)
 
-        lbl4 = Button(Frame_makebooking, text="Edit", bg="gray", font=("", 15, "bold"), fg="Black")
-        lbl4.place(x=250, y=300, width=90)
+        btnEdit = Button(Frame_makebooking, text="Edit", bg="gray", font=("", 15, "bold"), fg="Black")
+        btnEdit.place(x=250, y=300, width=90)
 
-        lbl4 = Button(Frame_makebooking, text="Clear", bg="blue", font=("", 15, "bold"), fg="Black")
-        lbl4.place(x=400, y=300, width=90)
+        btnClear = Button(Frame_makebooking, text="Clear", bg="blue", font=("", 15, "bold"), fg="Black")
+        btnClear.place(x=400, y=300, width=90)
 
-        lbl4 = Button(Frame_makebooking, text="View", bg="orange", font=("", 15, "bold"), fg="Black")
-        lbl4.place(x=550, y=300, width=90)
+        btnView = Button(Frame_makebooking, text="View", bg="orange", font=("", 15, "bold"), fg="Black")
+        btnView.place(x=550, y=300, width=90)
 
-        lbl4 = Button(Frame_makebooking, text="Delete", bg="red", font=("", 15, "bold"), fg="Black")
-        lbl4.place(x=700, y=300, width=90)
+        btnDelete = Button(Frame_makebooking, text="Delete", bg="red", font=("", 15, "bold"), fg="Black")
+        btnDelete.place(x=700, y=300, width=90)
 
         label_makebooking = Label(bg="white", width=120, height=12)
         label_makebooking.place(x=80, y=390)

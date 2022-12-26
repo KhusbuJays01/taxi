@@ -4,7 +4,7 @@ conn = mysql.connect("""
     host="localhost",
     user = "root",
     password="",
-    database = "test"
+    database = "Middleware"
 """)
 
 print(conn)

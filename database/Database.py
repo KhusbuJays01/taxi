@@ -1,14 +1,13 @@
 import mysql.connector
-conn = mysql.connector.connect(host = "localhost", user="root", password="", database="sample")
+import sys
+from tkinter import messagebox
 
-print(conn)
-cursor = conn.cursor()
-# cursor.execute('CREATE DATABASE Sample; ')
-cursor.execute('USE Sample;')
-
-# cursor.execute('''CREATE TABLE Userlogin ( userid int PRIMARY KEY,
-#                username varchar(30) unique,
-#                password varchar(15));''')
-
-cursor.execute("INSERT INTO userlogin(userid ,username, password) VALUES (001, 'khusbu', 'password');")
-conn.commit()
+class maindatabse():
+    def databaseConnection(self):
+        conn = None
+        try:
+            conn = mysql.connector.connect(host = "localhost", user="root", password="", database="khusbu")
+        except:
+            messagebox.showerror("Error", sys.exc_info())
+        finally:
+            return conn

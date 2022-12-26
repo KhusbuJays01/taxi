@@ -31,8 +31,8 @@ class DriverDashboard (Tk):
         head = Label(text="Old Trip List", bg="white", font=("", 25, "bold"), fg="Black")
         head.place(x=600, y=180)
 
-        lbl10 = Button(Frame_Driver, text="Complete Trip", bg="Green", font=("", 15, "bold"), fg="Black")
-        lbl10.place(width=150, height=35, x=380, y=470)
+        btncomplete = Button(Frame_Driver, text="Complete Trip", bg="Green", font=("", 15, "bold"), fg="Black")
+        btncomplete.place(width=150, height=35, x=380, y=470)
 
 
 

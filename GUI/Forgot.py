@@ -20,32 +20,32 @@ class Forgot (Tk):
         lbl = Label(self, text="Forget Password System ",bg="#2A556C", font=("", 20, "bold"), fg="white")
         lbl.place(x=40, y=60)
 
-        lbl1 = Label(self, text="User_Type", bg="#2A556C", font=("", 10, "bold"), fg="Black")
-        lbl1.place(x=170, y=140)
+        # lbl1 = Label(self, text="User_Type", bg="#2A556C", font=("", 10, "bold"), fg="Black")
+        # lbl1.place(x=170, y=140)
 
-        combo = ttk.Combobox(self, values=["Admin", "Customer", "Driver"])
-        combo.place(x=140, y=165)
+        # combo = ttk.Combobox(self, values=["Admin", "Customer", "Driver"])
+        # combo.place(x=140, y=165)
 
-        lbl2 = Label(self, text="Email", bg="#2A556C", font=("", 10, "bold"), fg="Black")
-        lbl2.place(x=170, y=220)
+        Email = Label(self, text="Email", bg="#2A556C", font=("", 10, "bold"), fg="Black")
+        Email.place(x=170, y=220)
 
         ent1 = Entry(self)
         ent1.place(x=140, y=245)
 
-        lbl2 = Label(self, text="new PAssword", bg="#2A556C", font=("", 10, "bold"), fg="Black")
-        lbl2.place(x=160, y=290)
+        new_PAssword = Label(self, text="new Password", bg="#2A556C", font=("", 10, "bold"), fg="Black")
+        new_PAssword.place(x=160, y=290)
 
         ent1 = Entry(self)
         ent1.place(x=140, y=320)
 
-        lbl2 = Label(self, text="Confirm PAssword", bg="#2A556C", font=("", 10, "bold"), fg="Black")
-        lbl2.place(x=145, y=370)
+        Confirm_PAssword = Label(self, text="Confirm Password", bg="#2A556C", font=("", 10, "bold"), fg="Black")
+        Confirm_PAssword.place(x=145, y=370)
 
         ent1 = Entry(self)
         ent1.place(x=140, y=400)
 
-        lbl6 = Button(self, text="Update", bg="red", font=("", 15, "bold"), fg="Black")
-        lbl6.place(width=70, height=25, x=170, y=470)
+        Update = Button(self, text="Update", bg="red", font=("", 15, "bold"), fg="Black")
+        Update.place(width=70, height=25, x=170, y=470)
 
 
         self.mainloop()
