@@ -96,3 +96,5 @@ class RegisterMiddleware:
                 messagebox.showerror('Error', e.msg)
             else:
                 conn.commit()
+                conn.close()
+                return True

@@ -1,5 +1,6 @@
 from tkinter import *
 from tkinter import ttk
+from tkcalendar import DateEntry
 
 
 class makebooking(Tk):
@@ -42,8 +43,8 @@ class makebooking(Tk):
         picDate = Label(Frame_makebooking, text="Date :", bg="#2A556C", font=("", 15, "bold"), fg="#FFFAFA")
         picDate.place(x=50, y=255)
 
-        ent4 = Entry(Frame_makebooking, width=35)
-        ent4.place(x=153, y=265)
+        picDate = DateEntry(Frame_makebooking,width=18,font=('Time New Roman',16))
+        picDate.place(x=150,y=260)
 
         head = Label(text="Drop-------------------------------", bg="#2A556C", font=("", 20, "bold"), fg="#FFFAFA")
         head.place(x=540, y=150)
@@ -51,20 +52,20 @@ class makebooking(Tk):
         dropAddress = Label(Frame_makebooking, text="Address :", bg="#2A556C", font=("", 15, "bold"), fg="#FFFAFA")
         dropAddress.place(x=490, y=170)
 
-        ent5 = Entry(Frame_makebooking, width=35)
-        ent5.place(x=600, y=175)
+        dropAddress = Entry(Frame_makebooking, width=35)
+        dropAddress.place(x=600, y=175)
 
         dropTime = Label(Frame_makebooking, text="Time :", bg="#2A556C", font=("", 15, "bold"), fg="#FFFAFA")
         dropTime.place(x=490, y=220)
 
-        ent6 = Entry(Frame_makebooking, width=35)
-        ent6.place(x=600, y=225)
+        dropTime = Entry(Frame_makebooking, width=35)
+        dropTime.place(x=600, y=225)
 
         dropDate = Label(Frame_makebooking, text="Date :", bg="#2A556C", font=("", 15, "bold"), fg="#FFFAFA")
         dropDate.place(x=490, y=255)
 
-        ent7 = Entry(Frame_makebooking, width=35)
-        ent7.place(x=600, y=265)
+        picDate = DateEntry(Frame_makebooking, width=15, font=('Time New Roman', 16))
+        picDate.place(x=600, y=260)
 
         btnConfirm = Button(Frame_makebooking, text="Confirm", bg="Green", font=("", 15, "bold"), fg="Black")
         btnConfirm.place(x=90, y=300, width=90)

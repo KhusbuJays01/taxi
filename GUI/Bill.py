@@ -1,6 +1,8 @@
 from tkinter import *
 from tkinter import ttk
 
+from tkcalendar import DateEntry
+
 
 class Bill(Tk):
     def __init__(self):
@@ -23,28 +25,33 @@ class Bill(Tk):
 
         # -------------------name-----------------------
         customer_name = Label( text="Customer Name :", bg="#2A556C", font=("", 15, "bold"), fg="Black")
-        customer_name.place(x=80, y=150)
+        customer_name.place(x=50, y=150)
 
         customer_name = Entry(width=25)
         customer_name.place(x=260, y=155)
 
-        rate = Label(text="Rate :", bg="#2A556C", font=("", 15, "bold"), fg="Black")
-        rate.place(x=80, y=200)
+        CardNo = Label(text="Card_No. :", bg="#2A556C", font=("", 15, "bold"), fg="Black")
+        CardNo.place(x=50, y=200)
 
-        rate = Entry(width=25)
-        rate.place(x=260, y=200)
+        CardNo = Entry(width=25)
+        CardNo.place(x=260, y=200)
 
-        vat = Label(text="VAT :", bg="#2A556C", font=("", 15, "bold"), fg="Black")
-        vat.place(x=80, y=250)
+        CardExpiredDate = Label(text="Card_Expired_Date :", bg="#2A556C", font=("", 15, "bold"), fg="Black")
+        CardExpiredDate.place(x=50, y=250)
 
-        vat = Entry(width=25)
-        vat.place(x=260, y=250)
+        CardExpiredDate = DateEntry(width=10, font=('Time New Roman', 14))
+        CardExpiredDate.place(x=260, y=250)
 
-        Kilometer = Label(text="Kilometer :", bg="#2A556C", font=("", 15, "bold"), fg="Black")
-        Kilometer.place(x=80, y=300)
+        # vat = Entry(width=25)
+        # vat.place(x=260, y=250)
 
-        kilometer = Entry(width=25)
-        kilometer.place(x=260, y=305)
+        CardTypes = Label(text="Card_Types :", bg="#2A556C", font=("", 15, "bold"), fg="Black")
+        CardTypes.place(x=50, y=300)
+
+        CardTypes = Entry(width=25)
+        CardTypes.place(x=260, y=305)
+
+        # ----------------------------------button-------------------------------
 
         btntotal = Button(text="Total",bg="green",font=("",15,"bold"),fg="white")
         btntotal.place(width=70,height=30,x=70,y=380)
@@ -74,8 +81,6 @@ class Bill(Tk):
 
         Bill = Label(label_Bill,text="Bill", bg="Red", font=("", 15, "bold"), fg="Black")
         Bill.place(x=200, y=6)
-
-
 
 
 

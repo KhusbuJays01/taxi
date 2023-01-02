@@ -38,8 +38,8 @@ class AdminDashboard(Tk):
         head1.place(x=140, y=150)
 
         # -----------------button----------------------------
-        lbl1 = Button(Frame_AdminDashboard, border=0, text="View Customer", bg="white", font=("", 20), fg="Black")
-        lbl1.place(x=50, y=130)
+        lbl1 = Button(Frame_AdminDashboard, border=0, text="Manage Customer", bg="white", font=("", 20), fg="Black")
+        lbl1.place(x=40, y=130)
 
         lbl2 = Button(Frame_AdminDashboard, border=0, text="Add Taxi Driver", bg="white", font=("", 20), fg="Black")
         lbl2.place(x=50, y=180)

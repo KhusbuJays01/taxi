@@ -39,7 +39,7 @@ class Home (Tk):
         self.mainloop()
     def open_signup(self, e):
         self.destroy()
-        Register(Home)
+        Register()
 
 
     def open_login1(self, e):

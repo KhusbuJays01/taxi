@@ -126,7 +126,7 @@ class Register(Tk):
         btn_signin.place(x=500, y=500)
         self.mainloop()
 
-    # -----------------------------validation-----------------------------
+    # # -----------------------------validation-----------------------------
     # def reg_Email(self, emailchecking):
     #     if len(emailchecking)>8:
     #         if re.match(r'\b[A-Za-z0-9_.]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b', emailchecking):
@@ -149,7 +149,7 @@ class Register(Tk):
     #             return False
     #     else:
     #         messagebox.showerror("Error", "short Telephone number length")
-    #
+
         # ---------------------------function---------------------------
 
     def open_login1(self):
@@ -175,7 +175,10 @@ class Register(Tk):
         obje.set_reggender = self.reg_Gender.get()
         obje.set_regpassword = self.reg_Password.get()
         # print(obje.__str__())
-        obje.insert_data()
+        result = obje.insert_data()
+
+        if result:
+            self.open_login1()
 
     def reg_data(self):
         if self.reg_Name.get() == "" and self.reg_Email.get() == ""  and self.reg_Address.get() == "" and self.reg_Telephone_No.get() == "" and  self.reg_Password.get() == "":
@@ -203,8 +206,6 @@ class Register(Tk):
 
         else :
             messagebox.showinfo("Success","Successful")
-            # self.open_login1()
-
             self.middleware()
 
 
