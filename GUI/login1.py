@@ -144,10 +144,10 @@ class Login1(Tk):
 
         try:
             if len(values) > 0:
+                print(values)
                 login_md.set_login_id = values[0]
-                login_md.set_login_usertype = values[1]
-                login_md.set_login_email = values[2]
-                login_md.set_login_pass = values[3]
+                login_md.set_login_email = values[1]
+                login_md.set_login_pass = values[2]
                 messagebox.showinfo('Success', f'Successfully login as a {login_md.get_login_usertype}.')
         except TypeError:
             messagebox.showerror('Error', 'Incorrect email and password !!')

@@ -51,7 +51,7 @@ class Login_middleware:
 
         if conn:
             cursor = conn.cursor()
-            sql = 'SELECT Customer_Id, User_Types, Email, Password FROM customer where Email = %s and Password = %s'
+            sql = 'SELECT Customer_id, Email, Password FROM Customer where Email = %s and Password = %s'
             values = (self.get_login_email, self.get_login_pass)
             try:
                 cursor.execute(sql, values)

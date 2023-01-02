@@ -88,8 +88,8 @@ class RegisterMiddleware:
 
         if conn:
             cursor = conn.cursor()
-            sql = 'INSERT INTO customer(User_Types, Name, Address, Email, Telephone, Gender, Password) values(%s, %s, %s, %s, %s, %s, %s)'
-            values = ('Customer', self.get_regname, self.get_regaddress, self.get_regemail, self.get_regtelephone, self.get_reggender, self.get_regpassword)
+            sql = 'INSERT INTO Customer(Name, Address, Email, Telephone, Gender, Password) values(%s, %s, %s, %s, %s, %s)'
+            values = (self.get_regname, self.get_regaddress, self.get_regemail, self.get_regtelephone, self.get_reggender, self.get_regpassword)
             try:
                 cursor.execute(sql, values)
             except mysql.connector.Error as e:

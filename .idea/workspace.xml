@@ -2,15 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="89c14a76-4f3d-4223-84ea-29a36f65377d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/GUI/Booking_Dashboard.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/image/bookingDashboard.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GUI/AdminDashboard.py" beforeDir="false" afterPath="$PROJECT_DIR$/GUI/AdminDashboard.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GUI/Bill.py" beforeDir="false" afterPath="$PROJECT_DIR$/GUI/Bill.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GUI/Home_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/GUI/Home_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GUI/Register.py" beforeDir="false" afterPath="$PROJECT_DIR$/GUI/Register.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GUI/make booking.py" beforeDir="false" afterPath="$PROJECT_DIR$/GUI/make booking.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GUI/login1.py" beforeDir="false" afterPath="$PROJECT_DIR$/GUI/login1.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Middleware/Register_middleware.py" beforeDir="false" afterPath="$PROJECT_DIR$/Middleware/Register_middleware.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Middleware/login_middleware.py" beforeDir="false" afterPath="$PROJECT_DIR$/Middleware/login_middleware.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/Database.py" beforeDir="false" afterPath="$PROJECT_DIR$/database/Database.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,8 +56,8 @@
       <recent name="C:\Users\Khusbu\PycharmProjects\pythonProject\pythonAssignment\Driver Dashboard" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.Home_page">
-    <configuration name="AdminDashboard" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.login1">
+    <configuration name="DriverDashboard" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="pythonAssignment" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -74,7 +70,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/GUI/AdminDashboard.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/GUI/DriverDashboard.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -83,7 +79,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Bill" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="Register" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="pythonAssignment" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -96,7 +92,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/GUI/Bill.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/GUI/Register.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -105,7 +101,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Home_page" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="Register_middleware" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="pythonAssignment" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -113,12 +109,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/GUI" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Middleware" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/GUI/Home_page.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Middleware/Register_middleware.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -195,18 +191,18 @@
     </configuration>
     <list>
       <item itemvalue="Python.main" />
-      <item itemvalue="Python.Home_page" />
-      <item itemvalue="Python.Bill" />
+      <item itemvalue="Python.DriverDashboard" />
+      <item itemvalue="Python.Register" />
+      <item itemvalue="Python.Register_middleware" />
       <item itemvalue="Python.login1" />
-      <item itemvalue="Python.AdminDashboard" />
       <item itemvalue="Python.make booking" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.Home_page" />
         <item itemvalue="Python.login1" />
-        <item itemvalue="Python.Bill" />
-        <item itemvalue="Python.AdminDashboard" />
+        <item itemvalue="Python.Register" />
+        <item itemvalue="Python.Register_middleware" />
+        <item itemvalue="Python.DriverDashboard" />
         <item itemvalue="Python.make booking" />
       </list>
     </recent_temporary>
@@ -260,7 +256,7 @@
       <workItem from="1672324644837" duration="5046000" />
       <workItem from="1672516454108" duration="1730000" />
       <workItem from="1672581295395" duration="671000" />
-      <workItem from="1672637152478" duration="329000" />
+      <workItem from="1672637152478" duration="6921000" />
     </task>
     <servers />
   </component>
@@ -294,12 +290,12 @@
     <SUITE FILE_PATH="coverage/pythonAssignment$BookingDashboard.coverage" NAME="BookingDashboard Coverage Results" MODIFIED="1672149404108" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/GUI" />
     <SUITE FILE_PATH="coverage/pythonAssignment$AssignToDriver.coverage" NAME="AssignToDriver Coverage Results" MODIFIED="1671653225216" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/GUI" />
     <SUITE FILE_PATH="coverage/pythonAssignment$booking.coverage" NAME="booking Coverage Results" MODIFIED="1671129348708" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/pythonAssignment$make_booking.coverage" NAME="make booking Coverage Results" MODIFIED="1672332571012" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/GUI" />
+    <SUITE FILE_PATH="coverage/pythonAssignment$make_booking.coverage" NAME="make booking Coverage Results" MODIFIED="1672639570136" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/GUI" />
     <SUITE FILE_PATH="coverage/pythonAssignment$View_booking.coverage" NAME="View_booking Coverage Results" MODIFIED="1671128929403" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/pythonAssignment$customer_view_middleware.coverage" NAME="customer view middleware Coverage Results" MODIFIED="1671472207681" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Middleware" />
     <SUITE FILE_PATH="coverage/pythonAssignment$login_middleware.coverage" NAME="login_middleware Coverage Results" MODIFIED="1671906710136" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Middleware" />
     <SUITE FILE_PATH="coverage/pythonAssignment$Forgot.coverage" NAME="Forgot Coverage Results" MODIFIED="1671986894674" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/GUI" />
-    <SUITE FILE_PATH="coverage/pythonAssignment$DriverDashboard.coverage" NAME="DriverDashboard Coverage Results" MODIFIED="1671724917531" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/GUI" />
+    <SUITE FILE_PATH="coverage/pythonAssignment$DriverDashboard.coverage" NAME="DriverDashboard Coverage Results" MODIFIED="1672641483473" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/GUI" />
     <SUITE FILE_PATH="coverage/pythonAssignment$Home_page__1_.coverage" NAME="Home_page (1) Coverage Results" MODIFIED="1671138317417" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Customer" />
     <SUITE FILE_PATH="coverage/pythonAssignment$main.coverage" NAME="main Coverage Results" MODIFIED="1671456154226" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/pythonAssignment$forget_middleware.coverage" NAME="forget middleware Coverage Results" MODIFIED="1671471870065" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Middleware" />
@@ -309,14 +305,15 @@
     <SUITE FILE_PATH="coverage/pythonAssignment$Home_page.coverage" NAME="Home_page Coverage Results" MODIFIED="1672637382597" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/GUI" />
     <SUITE FILE_PATH="coverage/pythonAssignment$Driver_reg_Middleware.coverage" NAME="Driver reg Middleware Coverage Results" MODIFIED="1671471811110" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Middleware" />
     <SUITE FILE_PATH="coverage/pythonAssignment$login1__1_.coverage" NAME="login1 (1) Coverage Results" MODIFIED="1671366612849" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/GUI" />
-    <SUITE FILE_PATH="coverage/pythonAssignment$Register.coverage" NAME="Register Coverage Results" MODIFIED="1672324679572" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/GUI" />
     <SUITE FILE_PATH="coverage/pythonAssignment$AdminDashboard.coverage" NAME="AdminDashboard Coverage Results" MODIFIED="1672581326736" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/GUI" />
+    <SUITE FILE_PATH="coverage/pythonAssignment$Register.coverage" NAME="Register Coverage Results" MODIFIED="1672645158291" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/GUI" />
     <SUITE FILE_PATH="coverage/pythonAssignment$Booking_Dashboard.coverage" NAME="Booking_Dashboard Coverage Results" MODIFIED="1672327057843" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/GUI" />
     <SUITE FILE_PATH="coverage/pythonAssignment$Bill.coverage" NAME="Bill Coverage Results" MODIFIED="1672586511918" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/GUI" />
     <SUITE FILE_PATH="coverage/pythonAssignment$Bill_middleware.coverage" NAME="Bill middleware Coverage Results" MODIFIED="1671472920658" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Middleware" />
+    <SUITE FILE_PATH="coverage/pythonAssignment$Register_middleware.coverage" NAME="Register_middleware Coverage Results" MODIFIED="1672642564929" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Middleware" />
     <SUITE FILE_PATH="coverage/pythonAssignment$Driver_Detail_Middleware.coverage" NAME="Driver Detail Middleware Coverage Results" MODIFIED="1671471924350" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Middleware" />
     <SUITE FILE_PATH="coverage/pythonAssignment$Assign_to_driver_middleware.coverage" NAME="Assign to driver middleware Coverage Results" MODIFIED="1671515313435" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Middleware" />
-    <SUITE FILE_PATH="coverage/pythonAssignment$login1.coverage" NAME="login1 Coverage Results" MODIFIED="1672637170315" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/GUI" />
+    <SUITE FILE_PATH="coverage/pythonAssignment$login1.coverage" NAME="login1 Coverage Results" MODIFIED="1672646517624" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/GUI" />
     <SUITE FILE_PATH="coverage/pythonAssignment$CustomerView.coverage" NAME="CustomerView Coverage Results" MODIFIED="1671652981727" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/GUI" />
     <SUITE FILE_PATH="coverage/pythonAssignment$make_booking_middleware.coverage" NAME="make booking middleware Coverage Results" MODIFIED="1671471822860" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Middleware" />
   </component>
