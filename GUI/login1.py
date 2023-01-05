@@ -1,8 +1,13 @@
 from tkinter import *
 from tkinter import ttk, messagebox
+from unittest import result
 from PIL import ImageTk,Image
+import booking
 from Forgot import Forgot
+from GUI.AdminDashboard import AdminDashboard
+from GUI.makebooking import makebooking
 # from GUI.Register import Register
+from GUI import makebooking
 from Middleware import login_middleware
 
 # def Resister_page(label_win=None):
@@ -39,12 +44,6 @@ class Login1(Tk):
         self.frame.pack();
         self.configure(background="#707FA6")
         self.wm_state("zoomed")
-        #
-        # # ------------------variable----------------------
-        # self.log.id = IntVar()
-        # self.log.User_Type.StringVar()
-        # self.Log.User_Name.StringVar()
-        # self.log.Password.StringVar()
 
         # --------------------------image size-------------------------------
         self.image = Image.open('../image/car.jpg').resize((1500, 800))
@@ -106,8 +105,8 @@ class Login1(Tk):
 
         btn_login = Button(self.label_win, text="Login", bg="green", font=("", 15, "bold"), fg="Black",
                       command=self.log_db)
-
         btn_login.place(width=70, height=25, x=130, y=400)
+        # btn_login.bind("<BUtton-1",self.open_makebooking())
 
         lbl7 = Label(self.label_win, text="Don't have an account?", bg="white", font=("", 10), fg="black")
         lbl7.place(x=20, y=500)
@@ -119,13 +118,6 @@ class Login1(Tk):
         Sign_Up.place(x=200, y=500)
         # command = lambda *a: self.open_Register()
 
-
-        # end nex window
-
-        # -----------------------validation------------------------
-
-
-
         # ----------------method------------------------------
 
         self.mainloop()
@@ -135,24 +127,46 @@ class Login1(Tk):
         self.label_win.destroy()
         Forgot()
 
+    def open_makebooking(self):
+        self.log_db()
+        makebooking.makebooking()
+
     def log_db(self):
         login_md = login_middleware.Login_middleware()
         login_md.set_login_usertype = self.combo_usertype.get()
         login_md.set_login_email = self.email_ent.get()
         login_md.set_login_pass = self.pass_ent.get()
         values = login_md.login_database()
+        #
+        # if result:
+        #     self.login_makebooking()
 
         try:
             if len(values) > 0:
-                print(values)
+                # print(values)
                 login_md.set_login_id = values[0]
                 login_md.set_login_email = values[1]
                 login_md.set_login_pass = values[2]
                 messagebox.showinfo('Success', f'Successfully login as a {login_md.get_login_usertype}.')
+                self.destroy()
+
         except TypeError:
             messagebox.showerror('Error', 'Incorrect email and password !!')
 
+            # if object.get_login_usertype == "Customer":
+            #     self.destroy()
+            #     makebooking.makebooking()
+            #     # self.open_makebooking()
 
+                # makebooking.makebooking(object.)
+
+            # elif object.get_usertype == "Admin":
+            #     self.login1.destroy()
+            #     AdminDashboard.AdminDashboard(object.get_userid)
+
+            # elif object.get_usertype == "Driver":
+            #     self.login.destroy()
+            #     booking.Booking(object.get_userid)
 
 if __name__ == '__main__':
     login = Login1()

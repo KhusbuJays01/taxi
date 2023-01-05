@@ -11,3 +11,15 @@ class maindatabse():
             messagebox.showerror("Error", sys.exc_info())
         finally:
             return conn
+
+    def get_booking_table_data(self):
+        sql = 'select * from Booking'
+        conn = self.databaseConnection()
+        cursor = conn.cursor(prepared=True)
+        cursor.execute(sql)
+        data = cursor.fetchall()
+        if not data:
+            return False
+        conn.close()
+        return data
+

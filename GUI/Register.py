@@ -37,13 +37,16 @@ class Register(Tk):
         Frame_Register.place(x=50, y=40)
 
 # ------------------------------Title----------------------
-        head = Label(text="Registration System", bg="#2A556C", font=("", 25, "bold"), fg="#FFFAFA")
-        head.place(x=300, y=50)
+        head = Label(text="Registration ", bg="#2A556C", font=("", 25, "bold"), fg="#FFFAFA")
+        head.place(x=380, y=70)
 
 
         # -----------------set label--------------------------------------
-        # lbl1 = Label(Frame_Register, text="User_Type:", bg="#2A556C", font=("", 15, "bold"), fg="Black")
-        # lbl1.place(x=200, y=100)
+        # Firstname = Label(Frame_Register, text="First_name:", bg="#2A556C", font=("", 15, "bold"), fg="Black")
+        # Firstname.place(x=200, y=100)
+        #
+        # self.reg_First = Entry(Frame_Register, textvariable=self.reg_Name, width=50)
+        # self.reg_Fist.place(x=350, y=150)
 
 
         Full_Name = Label(Frame_Register, text="Full_Name:", bg="#2A556C", font=("", 15, "bold"), fg="Black")
@@ -126,29 +129,29 @@ class Register(Tk):
         btn_signin.place(x=500, y=500)
         self.mainloop()
 
-    # # -----------------------------validation-----------------------------
-    # def reg_Email(self, emailchecking):
-    #     if len(emailchecking)>8:
-    #         if re.match(r'\b[A-Za-z0-9_.]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b', emailchecking):
-    #             return True
+    # # # -----------------------------validation-----------------------------
+    #     def reg_Email(self, emailchecking):
+    #         if len(emailchecking)>8:
+    #             if re.match(r'\b[A-Za-z0-9_.]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b', emailchecking):
+    #                 return True
+    #             else:
+    #                 messagebox.showerror("Error", "Enter valid email")
+    #                 return False
     #         else:
-    #             messagebox.showerror("Error", "Enter valid email")
-    #             return False
-    #     else:
-    #         messagebox.showerror("Error", "short email length")
+    #             messagebox.showerror("Error", "short email length")
     #
-    # def number(self, number_checking):
-    #     if len(number_checking) == 10:
-    #         if re.match('\d{10}', number_checking):
-    #             messagebox.showinfo('Success', 'Validation Successfully !!')
-    #             self.open_login1()
+    #     def number(self, number_checking):
+    #         if len(number_checking) == 10:
+    #             if re.match('\d{10}', number_checking):
+    #                 messagebox.showinfo('Success', 'Validation Successfully !!')
+    #                 self.open_login1()
     #
-    #             return True
+    #                 return True
+    #             else:
+    #                 messagebox.showerror("Error", "Enter number only")
+    #                 return False
     #         else:
-    #             messagebox.showerror("Error", "Enter number only")
-    #             return False
-    #     else:
-    #         messagebox.showerror("Error", "short Telephone number length")
+    #             messagebox.showerror("Error", "short Telephone number length")
 
         # ---------------------------function---------------------------
 
@@ -156,6 +159,9 @@ class Register(Tk):
         self.destroy()
         Login1()
 
+    def open_login1(self):
+        self.destroy()
+        Login1()
     # def open_Driver(self, e):
     #     if self.combo.get()=="Driver":
     #

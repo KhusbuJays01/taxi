@@ -35,7 +35,6 @@ class Home (Tk):
         button1.place(x=1240, y=20)
         button1.bind("<Button-1>", self.open_signup)
 
-
         self.mainloop()
     def open_signup(self, e):
         self.destroy()
