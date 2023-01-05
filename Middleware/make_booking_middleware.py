@@ -91,3 +91,20 @@ class makebookingmiddleware:
                 conn.commit()
                 conn.close()
                 return True
+
+    #         ----------edit booking---------------
+
+    # def edit(self):
+    #     db = Database.maindatabse()
+    #     conn = db.databaseConnection()
+    #
+    #     if conn:
+    #         mycursor = conn.cursor()
+    #         sql = 'update booking SET PickUp_date=%s, PicUP_addess=%s, PickUp_time=%s, drop_address=%s,Drop_date=%s WHERE bookingID = %s'
+    #         values = (
+    #         self.get_pickupdate, self.get_pickupaddress, self.get_pickuptime, self.get_dropdate, self.get_dropaddress,
+    #         self.get_droptime)
+    #         db.edit(sql, conn, mycursor, values)
+
+    # def edit(self):
+    #     pass

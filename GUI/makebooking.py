@@ -21,7 +21,6 @@ class makebooking(Tk):
     #     #             return False
     #     #     else:
     #     #         messagebox.showerror("Error", "short email length")
-    #
     #     # save
     #     # display confirm message
 
@@ -99,7 +98,7 @@ class makebooking(Tk):
         self.dropDate = DateEntry(Frame_makebooking,width=18,font=('Time New Roman',16),textvariable=self.drop_date)
         self.dropDate.place(x=600, y=260)
 
-        # ----------button-----------
+        # -------------------------------------------button---------------------------------------------
 
         btnConfirm = Button(Frame_makebooking, text="Confirm", bg="Green", font=("", 15, "bold"), fg="Black",command=self.confirmbooking) # command=function name to perform
         btnConfirm.place(x=90, y=300, width=90)
@@ -123,7 +122,7 @@ class makebooking(Tk):
         column = ('Booking_id', 'pickup_address', 'picTime', 'picDate', 'dropAddress', 'dropTime','dropDate',
             'booking_status')
         self.table = ttk.Treeview(Frame_makebooking, columns=column, show='headings')
-        ##defining heading
+        #------------------------defining heading-----------------------------------
         self.table.heading('Booking_id', text='Booking ID')
         self.table.heading('pickup_address', text='pickup_address')
         self.table.heading('picTime', text='Pickup-Time')
@@ -133,16 +132,17 @@ class makebooking(Tk):
         self.table.heading('dropDate', text='Drop_Date')
         self.table.heading('booking_status', text='booking_staus')
 
-        ##Add some style
+
+        #----------------------------Add  style-----------------------------
         style = ttk.Style()
-        ##configure our treeview color
+        #---------------------------configure  color-------------------------
         style.configure("Treeview",
                         background="#D3D3D3",
                         foreground="black",
                         rowheight=50,
                         font=("", 10))
-        ### sizing the heading in the columns
-        self.table.column("Booking_id", anchor=CENTER, stretch=NO, width=80, minwidth=67)  # , ne, e, se, s, sw, w, nw,
+        #------------------------sizing the table heading in the columns---------
+        self.table.column("Booking_id", anchor=CENTER, stretch=NO, width=80, minwidth=67)
         self.table.column("pickup_address", anchor=CENTER, stretch=NO, width=100)
         self.table.column("picTime", anchor=CENTER, stretch=NO, width=90)
         self.table.column("picDate", anchor=CENTER, stretch=NO, width=110)
@@ -152,14 +152,15 @@ class makebooking(Tk):
         self.table.column("booking_status", anchor=CENTER,stretch=NO,width=170)
         self.get_table_data()
 
-        # constructing vertical scrollbar
+        #--------------constructing vertical scrollbar-------------------------
         scrlbar = ttk.Scrollbar(Frame_makebooking, orient="vertical", command=self.table.yview)
-        # placing scrollbar by using place()
         # placing scrollbar by using place()
         self.table.place(x=0, y=390, height=670, width=1000)
         scrlbar.place(x=882, y=392, height=157)
         self.table.configure(yscrollcommand=scrlbar.set)
 
+
+        # -------------confirm booking-----------------------------------------------
         def makebookingmiddleware(self):
             obje = make_booking_middleware.makebookingmiddleware()
             obje.set_bookingstatus = self.bookingstatus.get()
@@ -170,8 +171,21 @@ class makebooking(Tk):
             obje.set_droptime = self.droptime.get()
             obje.set_dropdate =self.dropDate.get()
             result = obje.insert_data()
+
+        #     ------------edit booking---------------------------------------------
+        # def edit(self):
+        #     obje = make_booking_middleware.makebookingmiddleware()
+        #     obje.set_pickup_address = self.pickup_address.get()
+        #     obje.set_pickupdate = self.pickupdate.strftime("%Y-%m-%d")
+        #     obje.set_pickup_time = (self.pickup_time.get() + self.combo_time.get())
+        #     obje.set_droptime = self.set_droptime.get()
+        #     obje.set_dropdate = self.set_dropdate.get()
+        #     obje.set_bookingstatu = "Pending"
+        #     obje.edit()
+        #     self.table_data()
         self.mainloop()
 
+    # ----------------------validation----------------------------------
     def confirmbooking(self):
             # print("date", self.dropDate.get())
             if self.pickup_address.get() == "" and self.pickup_time.get() == "" and self.pickup_date.get()== "" and self.Drop_address.get() == "" and self.Drop_time.get() == "" and self.Drop_date.get() == "":

@@ -51,11 +51,11 @@ class CustomerView(Tk):
         email = Label(text="Email :", bg="#2A556C", font=("", 15, "bold"), fg="Black")
         email.place(x=450, y=200)
 
-        ent5 = Entry(width=25)
-        ent5.place(x=600, y=200)
+        email = Entry(width=25)
+        email.place(x=600, y=200)
 
-        Contract = Label(text="Contract No. :", bg="#2A556C", font=("", 15, "bold"), fg="black")
-        Contract.place(x=80, y=250)
+        contract = Label(text="Contract No. :", bg="#2A556C", font=("", 15, "bold"), fg="black")
+        contract.place(x=80, y=250)
 
         contract = Entry(width=25)
         contract.place(x=260, y=250)
@@ -75,6 +75,7 @@ class CustomerView(Tk):
         save = Button(text="Save",bg="black",font=("",15,"bold"),fg="white")
         save.place(width=100,height=30,x=350,y=350)
 
+
         clear = Button(text="Clear",bg="black", font=("",15, "bold"),fg="white")
         clear.place(width=100,height=30,x=500,y=350)
 
@@ -84,12 +85,54 @@ class CustomerView(Tk):
         delete = Button(text="Delete", bg="#ED5843", font=("", 15, "bold"), fg="Black")
         delete.place(width=100, height=30, x=800, y=350)
 
+        # label_CustomerView = Label(bg="white", width=132, height=16)
+        # label_CustomerView.place(x=30, y=390)
 
+        column = ('customerid', 'fullname', 'address', 'email', 'contract', 'combo', 'password'
+                  )
+        self.table = ttk.Treeview(columns=column, show='headings')
+        ##defining heading
+        self.table.heading('customerid', text='Customer_id')
+        self.table.heading('fullname', text='Fullname')
+        self.table.heading('address', text='Address')
+        self.table.heading('email', text='Email')
+        self.table.heading('contract', text='contract')
+        self.table.heading('combo', text='Gender')
+        # self.table.heading('dropDate', text='Drop_Date')
+        self.table.heading('password', text='Password')
 
-        label_CustomerView = Label(bg="white", width=132, height=16)
-        label_CustomerView.place(x=30, y=390)
+        ##Add some style
+        style = ttk.Style()
+        ##configure our treeview color
+        style.configure("Treeview",
+                        background="#D3D3D3",
+                        foreground="black",
+                        rowheight=50,
+                        font=("", 10))
+        ### sizing the heading in the columns
+        self.table.column("customerid", anchor=CENTER, stretch=NO, width=140, minwidth=67)  # , ne, e, se, s, sw, w, nw,
+        self.table.column("fullname", anchor=CENTER, stretch=NO, width=150)
+        self.table.column("address", anchor=CENTER, stretch=NO, width=130)
+        self.table.column("email", anchor=CENTER, stretch=NO, width=140)
+        self.table.column("contract", anchor=CENTER, stretch=NO, width=130)
+        self.table.column("combo", anchor=CENTER, stretch=NO, width=140)
+        self.table.column("password", anchor=CENTER, stretch=NO, width=140)
+        self.get_table_data()
+
+        # constructing vertical scrollbar
+        scrlbar = ttk.Scrollbar(orient="vertical", command=self.table.yview)
+        # placing scrollbar by using place()
+        # placing scrollbar by using place()
+        self.table.place(x=0, y=390, height=670, width=1050)
+        scrlbar.place(x=972, y=392, height=270)
+        self.table.configure(yscrollcommand=scrlbar.set)
 
 
         self.mainloop()
+
+    def get_table_data(self):
+        pass
+
+
 if __name__ == '__main__':
         login = CustomerView ()

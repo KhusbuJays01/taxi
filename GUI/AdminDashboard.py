@@ -34,78 +34,24 @@ class AdminDashboard(Tk):
 
 
         # ----------------------title 2nd-----------------------------
-        head1 = Label(text="Dashboard ", bg="White", font=("", 25, "bold"), fg="Green")
-        head1.place(x=140, y=150)
+        head1 = Label(text="Admin ", bg="White", font=("", 25, "bold"), fg="Green")
+        head1.place(x=155, y=150)
 
         # -----------------button----------------------------
-        lbl1 = Button(Frame_AdminDashboard, border=0, text="Manage Customer", bg="white", font=("", 20), fg="Black")
-        lbl1.place(x=40, y=130)
+        Manage = Button(Frame_AdminDashboard, border=0, text="Manage Customer", bg="white", font=("", 20), fg="Black")
+        Manage.place(x=20, y=130)
 
-        lbl2 = Button(Frame_AdminDashboard, border=0, text="Add Taxi Driver", bg="white", font=("", 20), fg="Black")
-        lbl2.place(x=50, y=180)
+        Add = Button(Frame_AdminDashboard, border=0, text="Add Taxi Driver", bg="white", font=("", 20), fg="Black")
+        Add.place(x=20, y=215)
 
-        lbl3 = Button(Frame_AdminDashboard, border=0, text="Assign to Driver", bg="white", font=("", 20), fg="Black")
-        lbl3.place(x=50, y=230)
+        Assign = Button(Frame_AdminDashboard, border=0, text="Assign to Driver", bg="white", font=("", 20), fg="Black")
+        Assign.place(x=20, y=290)
 
-        lbl4 = Button(Frame_AdminDashboard, border=0, text="Payment", bg="white", font=("", 20), fg="Black")
-        lbl4.place(x=50, y=280)
+        # lbl4 = Button(Frame_AdminDashboard, border=0, text="Payment", bg="white", font=("", 20), fg="Black")
+        # lbl4.place(x=50, y=280)
 
-        lbl5 = Button(Frame_AdminDashboard, border=0, text="Log Out", bg="white", font=("", 20,"bold"), fg="Red")
-        lbl5.place(x=50, y=430)
-
-        label_AdminDashboard = Label(bg="white", width=35, height=8)
-        label_AdminDashboard.place(x=420, y=170)
-
-        lbl = Label(label_AdminDashboard, text="Total Rider ", bg="white", font=("", 20, "bold"), fg="#FB791B")
-        lbl.place(x=50, y=40)
-
-        label_AdminDashboard = Label(bg="white", width=35, height=8)
-        label_AdminDashboard.place(x=705, y=170)
-
-        lbl = Label(label_AdminDashboard, text="Total Customer ", bg="white", font=("", 20, "bold"), fg="Black")
-        lbl.place(x=30, y=40)
-
-        label_AdminDashboard = Label(bg="white", width=35, height=8)
-        label_AdminDashboard.place(x=1000, y=170)
-
-        lbl = Label(label_AdminDashboard, text="Available Rider ", bg="white", font=("", 20, "bold"), fg="#BB0D95")
-        lbl.place(x=25, y=40)
-
-        label_AdminDashboard = Label(bg="white", width=35, height=8)
-        label_AdminDashboard.place(x=420, y=340)
-
-        lbl = Label(label_AdminDashboard, text="Unavailable Rider ", bg="white", font=("", 20, "bold"), fg="#FB791B")
-        lbl.place(x=10, y=40)
-
-        label_AdminDashboard = Label(bg="white", width=35, height=8)
-        label_AdminDashboard.place(x=705, y=340)
-
-        lbl = Label(label_AdminDashboard, text="Confirm Trip ", bg="white", font=("", 20, "bold"), fg="Black")
-        lbl.place(x=25, y=40)
-
-        label_AdminDashboard = Label(bg="white", width=35, height=8)
-        label_AdminDashboard.place(x=1000, y=340)
-
-        lbl = Label(label_AdminDashboard, text="Unconfirmed Trip ", bg="white", font=("", 20, "bold"), fg="#BB0D95")
-        lbl.place(x=7, y=40)
-
-        label_AdminDashboard = Label(bg="white", width=35, height=8)
-        label_AdminDashboard.place(x=420, y=520)
-
-        lbl = Label(label_AdminDashboard, text="Booked Trip ", bg="white", font=("", 20, "bold"), fg="#FB791B")
-        lbl.place(x=30, y=40)
-
-        label_AdminDashboard = Label(bg="white", width=35, height=8)
-        label_AdminDashboard.place(x=700, y=520)
-
-        lbl = Label(label_AdminDashboard, text="Cancel Rides ", bg="white", font=("", 20, "bold"), fg="Black")
-        lbl.place(x=7, y=40)
-
-
-        label_AdminDashboard = Label(bg="white", width=35, height=8)
-        label_AdminDashboard.place(x=1000, y=520)
-
-
+        LogOut = Button(Frame_AdminDashboard, border=0, text="Log Out", bg="white", font=("", 20,"bold"), fg="Red")
+        LogOut.place(x=50, y=430)
 
         self.mainloop()
 if __name__ == '__main__':
