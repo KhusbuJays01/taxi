@@ -1,7 +1,15 @@
+from tkinter import messagebox
+
+import mysql
+
+from database import Database
+
+
 class makebookingmiddleware:
     def __init__(self):
 
         # --------------variable-----------------
+        # self.Booking_Status = ""
         self.Pick_Up_Address = ""
         self.Pick_Up_Time = ""
         self.Pick_Up_Date = ""
@@ -60,7 +68,29 @@ class makebookingmiddleware:
         def set_dropdate(self, dropdate):
             self.Drop_Date = dropdate
 
+        #
+        # def insert_data(self):
+        #     db = Database.maindatabse()
+        #     conn = db.databaseConnection()
+        #
+        #     if conn:
+        #         cursor = conn.cursor()
+        #         sql = 'INSERT INTO Booking(Booking_status, PickUp_date, PicUP_addess, PickUp_time, Drop_date, Drop_address,Drop_time,CustomerCustomer_id) values(%s, %s, %s, %s, %s, %s,%s,%s)'
+        #         values = (
+        #         self.get_regname, self.get_regaddress, self.get_regemail, self.get_regtelephone, self.get_reggender,
+        #         self.get_regpassword)
+        #         try:
 
-#         self.mainloop()
-# if __name__ == '__main__':
-#         login = makebookingmiddleware
+
+                    # cursor.execute(sql, values)
+                    # except mysql.connector.Error as e:
+                    # messagebox.showerror('Error', e.msg)
+                    # else:
+                    # conn.commit()
+                    # conn.close()
+                    # return True
+
+
+
+
+
