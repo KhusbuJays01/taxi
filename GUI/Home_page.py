@@ -1,7 +1,7 @@
 from tkinter import *
-from tkinter import ttk
-from Register import Register
-from login1 import Login1
+
+from GUI import Register, login1
+
 from PIL import ImageTk, Image
 
 
@@ -38,12 +38,12 @@ class Home (Tk):
         self.mainloop()
     def open_signup(self, e):
         self.destroy()
-        Register()
+        Register.Registerpage()
 
 
     def open_login1(self, e):
             self.destroy()
-            Login1()
+            login1.Login()
 
 if __name__ == '__main__':
         login = Home()

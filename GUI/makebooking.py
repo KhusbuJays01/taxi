@@ -60,6 +60,12 @@ class makebooking(Tk):
         self.picDate = DateEntry(Frame_makebooking,width=18,font=('Time New Roman',16),textvariable=self.pickup_date)
         self.picDate.place(x=150,y=260)
 
+        # booking = Label(Frame_makebooking, text="Booking-id :", bg="#2A556C", font=("", 15, "bold"), fg="#FFFAFA")
+        # booking.place(x=20, y=300)
+        #
+        # self.bookingID = Entry(Frame_makebooking, width=35, textvariable=self.pickup_time)
+        # self.bookingID.place(x=150, y=300)
+
         head = Label(text="Drop-------------------------------", bg="#2A556C", font=("", 20, "bold"), fg="#FFFAFA")
         head.place(x=540, y=150)
 
