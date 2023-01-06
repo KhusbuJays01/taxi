@@ -24,16 +24,20 @@ class maindatabse():
         return data
 
 
-#     ----edit------------------------------
-#     def edit(self, sql, conn, cursor, value):
-#         if sql and cursor:
-#             try:
-#                 cursor.execute(sql, value)
-#             except mysql.connector.Error as e:
-#                 messagebox.showerror("ERROR", e.msg)
-#             else:
-#                 conn.commit()
-#                 return True
+    # ----edit------------------------------
+    def edit(self, sql, conn, cursor, value):
+        if sql and cursor:
+            try:
+                cursor.execute(sql, value)
+            except mysql.connector.Error as e:
+                messagebox.showerror("ERROR", e.msg)
+            else:
+                conn.commit()
+                return True
+
+
+#     -----------delete-------------------
+
 
 
 

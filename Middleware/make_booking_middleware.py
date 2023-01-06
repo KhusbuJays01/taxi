@@ -1,3 +1,4 @@
+import sys
 from tkinter import messagebox
 import mysql
 from database import Database
@@ -94,17 +95,21 @@ class makebookingmiddleware:
 
     #         ----------edit booking---------------
 
-    # def edit(self):
-    #     db = Database.maindatabse()
-    #     conn = db.databaseConnection()
-    #
-    #     if conn:
-    #         mycursor = conn.cursor()
-    #         sql = 'update booking SET PickUp_date=%s, PicUP_addess=%s, PickUp_time=%s, drop_address=%s,Drop_date=%s WHERE bookingID = %s'
-    #         values = (
-    #         self.get_pickupdate, self.get_pickupaddress, self.get_pickuptime, self.get_dropdate, self.get_dropaddress,
-    #         self.get_droptime)
-    #         db.edit(sql, conn, mycursor, values)
+    def edit(self, values):
+        db = Database.maindatabse()
+        conn = db.databaseConnection()
 
-    # def edit(self):
-    #     pass
+        if conn:
+            mycursor = conn.cursor()
+            sql = 'update booking SET PickUp_date=%s, PicUP_addess=%s, PickUp_time=%s, drop_address=%s,Drop_date=%s, Drop_time=%s WHERE Booking_id = %s'
+            mycursor.execute(sql, values)
+            conn.commit()
+            messagebox.showinfo("TBS", "Booking Updated Successfully")
+        else:
+            messagebox.showerror("TBS", "Booking Updated Error")
+
+    # #         ---------------------------------delete--------------------------------
+
+
+    #         messagebox.showinfo("delete", "You are sure to delete data")
+

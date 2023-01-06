@@ -2,28 +2,12 @@ import re
 from tkinter import *
 from tkinter import ttk, messagebox
 from tkcalendar import DateEntry
-
+import tkinter as tk
 from Middleware import make_booking_middleware
 from Middleware.make_booking_middleware import makebookingmiddleware
 from database import Database
 
 class makebooking(Tk):
-        # print("Hello")
-
-    #     #-------------------- validation --------------------
-    #
-    #     # def pickupaddress(self, pickupaddresschecking):
-    #     #     if len(pickupaddresschecking)>8:
-    #     #         if re.match(r'\b[A-Za-z0-9_.]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b', emailchecking):
-    #     #             return True
-    #     #         else:
-    #     #             messagebox.showerror("Error", "Enter valid email")
-    #     #             return False
-    #     #     else:
-    #     #         messagebox.showerror("Error", "short email length")
-    #     # save
-    #     # display confirm message
-
 
     def __init__(self):
         super().__init__()
@@ -32,6 +16,7 @@ class makebooking(Tk):
         self.frame = Frame(self)
         self.resizable(False, False)
         self.frame.pack()
+        self.selected_row = None
 
         # -----------variable-------
         self.bokingstatus = IntVar()
@@ -41,8 +26,7 @@ class makebooking(Tk):
         self.drop_address = StringVar()
         self.drop_date = StringVar()
         self.drop_time = StringVar()
-
-        # set background color
+        self.bookingID = IntVar()
         self.configure(background="#707FA6")
         self.geometry('990x660+50+50')
 
@@ -101,22 +85,29 @@ class makebooking(Tk):
         # -------------------------------------------button---------------------------------------------
 
         btnConfirm = Button(Frame_makebooking, text="Confirm", bg="Green", font=("", 15, "bold"), fg="Black",command=self.confirmbooking) # command=function name to perform
-        btnConfirm.place(x=90, y=300, width=90)
+        btnConfirm.place(x=90, y=345, width=90)
 
-        btnEdit = Button(Frame_makebooking, text="Edit", bg="gray", font=("", 15, "bold"), fg="Black")
-        btnEdit.place(x=250, y=300, width=90)
+        btnEdit = Button(Frame_makebooking, text="Edit", bg="gray", font=("", 15, "bold"), fg="Black",command=self.edit)
+        btnEdit.place(x=250, y=345, width=90)
 
-        btnClear = Button(Frame_makebooking, text="Clear", bg="blue", font=("", 15, "bold"), fg="Black")
-        btnClear.place(x=400, y=300, width=90)
+        # -----------------clear----------------
+        def clear():
+            self.pickup_address.delete(0, END)
+            self.picTime.delete(0, END)
+            self.picDate.delete(0, END)
+            self.dropAddress.delete(0, END)
+            self.dropTime.delete(0, END)
+            self.dropDate.delete(0, END)
+        btnClear = Button(Frame_makebooking, text="Clear", bg="blue", font=("", 15, "bold"), fg="Black", command=clear)
+        btnClear.place(x=400, y=345, width=90)
+
 
         btnView = Button(Frame_makebooking, text="Delete", bg="orange", font=("", 15, "bold"), fg="Black")
-        btnView.place(x=550, y=300, width=90)
+        btnView.place(x=550, y=345, width=90)
 
         btnDelete = Button(Frame_makebooking, text="LogOut", bg="red", font=("", 15, "bold"), fg="Black")
-        btnDelete.place(x=700, y=300, width=90)
+        btnDelete.place(x=700, y=345, width=90)
 
-        # label_makebooking = Label(bg="white", width=120, height=12)
-        # label_makebooking.place(x=80, y=390)
 
         ##constructing table
         column = ('Booking_id', 'pickup_address', 'picTime', 'picDate', 'dropAddress', 'dropTime','dropDate',
@@ -151,6 +142,7 @@ class makebooking(Tk):
         self.table.column("dropDate", anchor=CENTER, stretch=NO, width=110)
         self.table.column("booking_status", anchor=CENTER,stretch=NO,width=170)
         self.get_table_data()
+        self.table.bind("<<TreeviewSelect>>", self.tree_view_select)
 
         #--------------constructing vertical scrollbar-------------------------
         scrlbar = ttk.Scrollbar(Frame_makebooking, orient="vertical", command=self.table.yview)
@@ -158,6 +150,9 @@ class makebooking(Tk):
         self.table.place(x=0, y=390, height=670, width=1000)
         scrlbar.place(x=882, y=392, height=157)
         self.table.configure(yscrollcommand=scrlbar.set)
+
+
+        self.mainloop()
 
 
         # -------------confirm booking-----------------------------------------------
@@ -171,19 +166,54 @@ class makebooking(Tk):
             obje.set_droptime = self.droptime.get()
             obje.set_dropdate =self.dropDate.get()
             result = obje.insert_data()
+            clear()
 
         #     ------------edit booking---------------------------------------------
-        # def edit(self):
-        #     obje = make_booking_middleware.makebookingmiddleware()
-        #     obje.set_pickup_address = self.pickup_address.get()
-        #     obje.set_pickupdate = self.pickupdate.strftime("%Y-%m-%d")
-        #     obje.set_pickup_time = (self.pickup_time.get() + self.combo_time.get())
-        #     obje.set_droptime = self.set_droptime.get()
-        #     obje.set_dropdate = self.set_dropdate.get()
-        #     obje.set_bookingstatu = "Pending"
-        #     obje.edit()
-        #     self.table_data()
-        self.mainloop()
+    def tree_view_select(self,_):
+        cur = self.table.focus()
+        if not cur:
+            return
+        row = self.table.item(cur)["values"]
+        self.selected_row = row[0]
+        pickup_address = row[1]
+        picTime = row[2]
+        picDate = row[3]
+        dropAddress = row[4]
+        dropTime = row[5]
+        dropDate = row[6]
+        booking_status = row[7]
+        self.pickup_address.delete(0, tk.END)
+        self.pickup_address.insert(0, pickup_address)
+        self.picTime.delete(0, tk.END)
+        self.picTime.insert(0, picTime)
+        self.picDate.delete(0, tk.END)
+        self.picDate.insert(0, picDate)
+        self.dropAddress.delete(0, tk.END)
+        self.dropAddress.insert(0, dropAddress)
+        self.dropTime.delete(0, tk.END)
+        self.dropTime.insert(0, dropTime)
+        self.dropDate.delete(0, tk.END)
+        self.dropDate.insert(0, dropDate)
+
+    def edit(self):
+        if not self.selected_row:
+            return
+        pa = self.pickup_address.get()
+        pt = self.picTime.get()
+        pd = self.picDate.get()
+        da = self.dropAddress.get()
+        dt = self.dropTime.get()
+        dd = self.dropDate.get()
+
+        values = [pd, pa, pt, da, dd, dt, self.selected_row]
+        makebookingmiddleware().edit(values)
+        self.get_table_data()
+
+        # def clear(self):
+        #     self.pickup_address.
+
+
+
 
     # ----------------------validation----------------------------------
     def confirmbooking(self):

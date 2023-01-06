@@ -149,6 +149,8 @@ class Login1(Tk):
                 login_md.set_login_pass = values[2]
                 messagebox.showinfo('Success', f'Successfully login as a {login_md.get_login_usertype}.')
                 self.destroy()
+                makebooking.makebooking()
+
 
         except TypeError:
             messagebox.showerror('Error', 'Incorrect email and password !!')
